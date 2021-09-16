@@ -1,72 +1,10 @@
+{% extends 'common.html' %}
 {% load static %}
-<!doctype html>
-<html lang="en">
-<head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
-          integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
-
-    <style>
-        .section_subtitle
-        {
-            font-family: 'Oswald', sans-serif;
-            font-size: 12px;
-            font-weight: 400;
-            color: #72728c;
-            line-height: 0.75;
-            text-transform: uppercase;
-            letter-spacing: 0.2em;
-        }
-        .section_title
-        {
-            color: #181818;
-            margin-top: 26px;
-        }
-    </style>
-
-    <title> Real Estate | Home </title>
-</head>
-
-<body class="bg-light text-dark">
-
-    <!-- Nav Bar Start-->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <div class="container-fluid">
-
-            <h1 class="navbar-brand">Real Estate</h1>
-
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="#"> Home </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="signup.html"> Sign-Up </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="about.html"> About Us </a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-    <!-- Nav Bar End-->
-
-
-
-
+{% block content %}
     <!-- Alert Start -->
     <div class="alert alert-success alert-dismissible fade show" role="alert">
-        <strong>Hello User</strong> Welcome to House Price Prediction....!!!
+        <strong>Hello User</strong> Welcome to Angel Real Estate House Price Prediction....!!!
         <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
     </div>
     <!-- Alert End -->
@@ -106,12 +44,9 @@
         <div class="row featurette d-flex justify-content-center align-items-center my-5">
             <div class="col-md-8 order-md-2">
                 <p class="lead">
-                    <h1>Let me help you find the home of your dreams.</h1>
-                    <h6>Whether its an apartment in the historic Gaslamp District, a sprawling estate in Rancho Santa Fe or a beautiful beach front home in La Jolla, we at Blair Owens Realty have you and your family covered.</h6>
+                    <h1>Let us help you find the home of your dreams.</h1>
+                    <h6>Whether its an apartment in the historic District or a beautiful beach front home , we at Angel Real Estate have you and your family covered.</h6>
                 </p>
-            </div>
-            <div class="col-md-4 order-md-1">
-                <img src="house-09.jpg" class="card-img-top" height="300" width="100">
             </div>
         </div>
     </div>
@@ -146,27 +81,8 @@
     <br>
     <!-- Card End -->
 
+{% endblock %}
 
 
 
-    <!-- Footer Start -->
-    <footer class="footer bg-dark">
-        <div class="footerSection">
-            <div class="container">
-                <div class="col-md-8 col-xs-12">
-                    <p style="color:white;">
-                        © Copyright 2021 By House Price Prediction Company LTD.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </footer>
-    <!-- Footer End -->
 
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
-            integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
-            crossorigin="anonymous"></script>
-
-</body>
-</html>
