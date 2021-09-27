@@ -10,4 +10,8 @@ def about(request):
     return render(request, 'about.html')
 
 
+def predict_house_price(request):
+    return render(request, 'main_input.html')
+
+
 

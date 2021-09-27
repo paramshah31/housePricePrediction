@@ -1,0 +1,30 @@
+{% extends 'common.html' %}
+{% load static %}
+{% block title %} House Price Prediction | Prediction {% endblock %}
+{% block content %}
+
+
+    <!-- Form Start -->
+    <div class="container my-4">
+        <form action="predict_price" method="POST">
+            {% csrf_token %}
+            <div class="container">
+                <h3>Please fill up this form to Predict House Price.</h3>
+
+                <label for="username"><b>Username</b></label>
+                <input type="text" placeholder="Enter Username" id="username" name="username" required>
+
+                <label for="password1"><b>Password</b></label>
+                <input type="password" placeholder="Enter Password" id="password1" name="password1" required>
+
+                <button type="submit" class="btn btn-outline-danger">Predict</button>
+
+            </div>
+        </form>
+    </div>
+    <!-- Form End -->
+
+
+
+
+    {% endblock %}
