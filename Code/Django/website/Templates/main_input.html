@@ -6,16 +6,28 @@
 
     <!-- Form Start -->
     <div class="container my-4">
-        <form action="predict_price" method="POST">
-            {% csrf_token %}
+        <form action="predict_price_actual" method="GET">
+
             <div class="container">
                 <h3>Please fill up this form to Predict House Price.</h3>
 
-                <label for="username"><b>Username</b></label>
-                <input type="text" placeholder="Enter Username" id="username" name="username" required>
+                <br>
+                <label for="location"><b>Select Location</b></label>
+                <select class="selectpicker form-control" id="location" name="location" required>
 
-                <label for="password1"><b>Password</b></label>
-                <input type="password" placeholder="Enter Password" id="password1" name="password1" required>
+                    {% for location in locations %}
+                    <option value="{{ location }}">{{ location }}</option>
+                    {% endfor %}
+                </select><br>
+
+                <label for="sqft"><b>Total Square Feet</b></label>
+                <input type="text" placeholder="Enter Sqft." id="sqft" name="sqft" required>
+
+                <label for="bath"><b>Total Square Feet</b></label>
+                <input type="text" placeholder="Enter Number of bathrooms" id="bath" name="bath" required>
+
+                <label for="bhk"><b>Total Square Feet</b></label>
+                <input type="text" placeholder="Enter Number of Bedrooms" id="bhk" name="bhk" required>
 
                 <button type="submit" class="btn btn-outline-danger">Predict</button>
 
