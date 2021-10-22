@@ -3,6 +3,34 @@
 {% block title %} House Price Prediction | Prediction {% endblock %}
 {% block content %}
 
+<br><br><br><br>
+
+<table align="center">
+    <tr>
+        <th> Location </th>
+        <td> {{ location }} </td>
+    </tr>
+
+    <tr>
+        <th> Total Square Feets </th>
+        <td> {{ sqft }} sqft</td>
+    </tr>
+
+    <tr>
+        <th> Total BHK </th>
+        <td> {{ bhk }} </td>
+    </tr>
+
+    <tr>
+        <th> Total Bathroom </th>
+        <td> {{ bath }} </td>
+    </tr>
+</table>
+
+<br>
 <h3 style="text-align:center;">Price = ₹ {{ ans }} lakhs</h3>
+<br><br><br><br>
+
+
 
 {% endblock %}

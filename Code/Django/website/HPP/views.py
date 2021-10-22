@@ -21,18 +21,13 @@ def predict_price_actual(request):
     model = pickle.load(open('BangloreHousePricePredictioModel.pkl', 'rb'))
     location = request.GET['location']
     sqft = request.GET['sqft']
-    bath = request.GET['bath']
+    bath = request.GET['bhk']
     bhk = request.GET['bhk']
-
-    print(location, "\n")
-    print(sqft, "\n")
-    print(bath, "\n")
-    print(bhk, "\n")
 
     prediction = model.predict(pd.DataFrame([[location, bhk, sqft, bath]], columns=["location", "size_BHK", "total_sqft", "bathroom"]))
     print(prediction, "rupees")
 
-    return render(request, "result.html", {'ans': prediction[0]})
+    return render(request, "result.html", {'ans': prediction[0], 'location': location, 'sqft':sqft, 'bath':bath, 'bhk':bhk})
 
 
 
